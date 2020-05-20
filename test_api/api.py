@@ -3,36 +3,60 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Route'
+records = []
 
-@app.route('/hello')
-def hello():
-    return 'Hello, World'    
 
-@app.route('/records', methods=["POST"])
-def add_record():
+@app.route('/get-records', methods=["POST"])
+def get_records():
+    key = request.form['key']
+    sld = request.form['sld']
+    tld = request.form['tld']
 
     response = {
         "intReturnCode": 0,
         "strMessage": "Successful",
-        "arrRecords": [{
-            "name":"navigator",
-            "type":"A",
-            "content":"41.45.34.67",
-            "ttl": 3600,
-            "prio":10
-        },
-        {
-            "name":"zipkin",
-            "type":"A",
-            "content":"35.89.34.67",
-            "ttl": 3600,
-            "prio":10
-        }]}
+        "arrRecords": records}
 
-    print(request.form['key'])
-    print(request.form['sld'])
-    print(request.form['tld'])
     return response
+
+
+@app.route('/update-records', methods=["POST"])
+def update_records():
+
+    key = request.form['key']
+    sld = request.form['sld']
+    tld = request.form['tld']
+
+    print(request.form)
+
+    index = 1
+
+    records.clear()
+
+    while True:
+        if form_has_index(index, request.form):
+            record = record_from_request(index, request.form)
+            records.append(record_from_request(index, request.form))
+            index += 1
+        else:
+            break
+
+    response = {
+        "intReturnCode": 0,
+        "strMessage": "Successful"}
+
+    return response
+
+
+def form_has_index(index, form):
+    return f'name{index}' in form.keys()
+
+
+def record_from_request(index, form):
+    return {
+        "name": request.form[f'name{index}'],
+        "type": request.form[f'type{index}'],
+        "content": request.form[f'content{index}'],
+        "ttl": request.form[f'ttl{index}'],
+        "prio": request.form[f'prio{index}']
+    }

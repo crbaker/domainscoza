@@ -1,0 +1,1089 @@
+2020/05/19 14:55:07 [INFO] Terraform version: 0.12.25  
+2020/05/19 14:55:07 [INFO] Go runtime version: go1.12.13
+2020/05/19 14:55:07 [INFO] CLI args: []string{"/usr/local/terraform/terraform", "apply"}
+2020/05/19 14:55:07 [DEBUG] Attempting to open CLI config file: /Users/chris/.terraformrc
+2020/05/19 14:55:07 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/05/19 14:55:07 [INFO] CLI command args: []string{"apply"}
+2020/05/19 14:55:07 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/05/19 14:55:07 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/05/19 14:55:07 [DEBUG] New state was assigned lineage "28ce8c55-0205-8934-8547-dc22ef0a6ef6"
+2020/05/19 14:55:07 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/05/19 14:55:07 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/05/19 14:55:07 [DEBUG] checking for provider in "."
+2020/05/19 14:55:07 [WARN] found legacy provider "terraform-provider-domainscoza"
+2020/05/19 14:55:07 [DEBUG] checking for provider in "/usr/local/terraform"
+2020/05/19 14:55:07 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/05/19 14:55:07 [DEBUG] found valid plugin: "domainscoza", "0.0.0", "/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza"
+2020/05/19 14:55:07 [DEBUG] checking for provisioner in "."
+2020/05/19 14:55:07 [DEBUG] checking for provisioner in "/usr/local/terraform"
+2020/05/19 14:55:07 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/05/19 14:55:07 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/05/19 14:55:07 [INFO] backend/local: starting Apply operation
+2020/05/19 14:55:07 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/05/19 14:55:07 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/05/19 14:55:07 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/05/19 14:55:07 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/05/19 14:55:07 [TRACE] statemgr.Filesystem: existing snapshot has lineage "0e2a3588-4802-5fb4-8804-f1dfebaef9f2" serial 7
+2020/05/19 14:55:07 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/05/19 14:55:07 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/05/19 14:55:07 [TRACE] backend/local: reading remote state for workspace "default"
+2020/05/19 14:55:07 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/05/19 14:55:07 [TRACE] statemgr.Filesystem: read snapshot with lineage "0e2a3588-4802-5fb4-8804-f1dfebaef9f2" serial 7
+2020/05/19 14:55:07 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/05/19 14:55:07 [TRACE] backend/local: building context for current working directory
+2020/05/19 14:55:07 [TRACE] terraform.NewContext: starting
+2020/05/19 14:55:07 [TRACE] terraform.NewContext: resolving provider version selections
+2020/05/19 14:55:07 [TRACE] terraform.NewContext: loading provider schemas
+2020/05/19 14:55:07 [TRACE] LoadSchemas: retrieving schema for provider type "domainscoza"
+2020-05-19T14:55:07.676+0200 [INFO]  plugin: configuring client automatic mTLS
+2020-05-19T14:55:07.705+0200 [DEBUG] plugin: starting plugin: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza args=[/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza]
+2020-05-19T14:55:07.708+0200 [DEBUG] plugin: plugin started: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83618
+2020-05-19T14:55:07.708+0200 [DEBUG] plugin: waiting for RPC address: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza
+2020-05-19T14:55:07.723+0200 [INFO]  plugin.terraform-provider-domainscoza: configuring server automatic mTLS: timestamp=2020-05-19T14:55:07.723+0200
+2020-05-19T14:55:07.753+0200 [DEBUG] plugin: using plugin: version=5
+2020-05-19T14:55:07.753+0200 [DEBUG] plugin.terraform-provider-domainscoza: plugin address: address=/var/folders/wb/__6n6kjx51bd183dldxc9plm0000gn/T/plugin800860505 network=unix timestamp=2020-05-19T14:55:07.753+0200
+2020/05/19 14:55:07 [TRACE] GRPCProvider: GetSchema
+2020/05/19 14:55:07 [TRACE] GRPCProvider: Close
+2020-05-19T14:55:07.821+0200 [DEBUG] plugin: plugin process exited: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83618
+2020-05-19T14:55:07.821+0200 [DEBUG] plugin: plugin exited
+2020/05/19 14:55:07 [TRACE] terraform.NewContext: complete
+2020/05/19 14:55:07 [TRACE] backend/local: finished building terraform.Context
+2020/05/19 14:55:07 [TRACE] backend/local: requesting interactive input, if necessary
+2020/05/19 14:55:07 [TRACE] Context.Input: Prompting for provider arguments
+2020/05/19 14:55:07 [TRACE] Context.Input: Provider provider.domainscoza implied by resource block at main.tf:1,1-46
+2020/05/19 14:55:07 [TRACE] Context.Input: Input for provider.domainscoza: map[string]cty.Value{}
+2020/05/19 14:55:07 [TRACE] backend/local: running validation operation
+2020/05/19 14:55:07 [INFO] terraform: building graph: GraphTypeValidate
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/05/19 14:55:07 [TRACE] ConfigTransformer: Starting for path: 
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/05/19 14:55:07 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/05/19 14:55:07 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.navigator_dns" (*terraform.NodeValidatableResource) config from main.tf:1,1-46
+2020/05/19 14:55:07 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.zipkin_dns" (*terraform.NodeValidatableResource) config from main.tf:13,1-43
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+  ------
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/05/19 14:55:07 [DEBUG] adding implicit provider configuration provider.domainscoza, implied first by domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: domainscoza_record.navigator_dns is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: domainscoza_record.zipkin_dns is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.zipkin_dns
+2020/05/19 14:55:07 [DEBUG] ProviderTransformer: "domainscoza_record.zipkin_dns" (*terraform.NodeValidatableResource) needs provider.domainscoza
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [DEBUG] ProviderTransformer: "domainscoza_record.navigator_dns" (*terraform.NodeValidatableResource) needs provider.domainscoza
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/05/19 14:55:07 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.domainscoza
+2020/05/19 14:55:07 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.zipkin_dns
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/05/19 14:55:07 [DEBUG] ReferenceTransformer: "domainscoza_record.navigator_dns" references: []
+2020/05/19 14:55:07 [DEBUG] ReferenceTransformer: "domainscoza_record.zipkin_dns" references: []
+2020/05/19 14:55:07 [DEBUG] ReferenceTransformer: "provider.domainscoza" references: []
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodeValidatableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeValidatableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/05/19 14:55:07 [DEBUG] Starting graph walk: walkValidate
+2020/05/19 14:55:07 [TRACE] dag/walk: updating graph
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "provider.domainscoza (close)"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "root"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "domainscoza_record.zipkin_dns" waiting on "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "provider.domainscoza (close)" waiting on "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "domainscoza_record.navigator_dns" waiting on "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "provider.domainscoza (close)" waiting on "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "root" waiting on "provider.domainscoza (close)"
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "provider.domainscoza (close)", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "domainscoza_record.navigator_dns", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "domainscoza_record.zipkin_dns", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza": starting visit (*terraform.NodeApplyableProvider)
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza": evaluating
+2020/05/19 14:55:07 [TRACE] [walkValidate] Entering eval tree: provider.domainscoza
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-05-19T14:55:07.823+0200 [INFO]  plugin: configuring client automatic mTLS
+2020-05-19T14:55:07.854+0200 [DEBUG] plugin: starting plugin: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza args=[/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza]
+2020-05-19T14:55:07.856+0200 [DEBUG] plugin: plugin started: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83619
+2020-05-19T14:55:07.856+0200 [DEBUG] plugin: waiting for RPC address: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza
+2020-05-19T14:55:07.871+0200 [INFO]  plugin.terraform-provider-domainscoza: configuring server automatic mTLS: timestamp=2020-05-19T14:55:07.871+0200
+2020-05-19T14:55:07.902+0200 [DEBUG] plugin: using plugin: version=5
+2020-05-19T14:55:07.902+0200 [DEBUG] plugin.terraform-provider-domainscoza: plugin address: address=/var/folders/wb/__6n6kjx51bd183dldxc9plm0000gn/T/plugin085031094 network=unix timestamp=2020-05-19T14:55:07.902+0200
+2020/05/19 14:55:07 [TRACE] BuiltinEvalContext: Initialized "domainscoza" provider for provider.domainscoza
+2020/05/19 14:55:07 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/05/19 14:55:07 [TRACE] buildProviderConfig for provider.domainscoza: no configuration at all
+2020/05/19 14:55:07 [TRACE] GRPCProvider: GetSchema
+2020/05/19 14:55:07 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/05/19 14:55:07 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:07 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:07 [TRACE] [walkValidate] Exiting eval tree: provider.domainscoza
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza": visit complete
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] vertex "domainscoza_record.zipkin_dns": starting visit (*terraform.NodeValidatableResource)
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] vertex "domainscoza_record.navigator_dns": starting visit (*terraform.NodeValidatableResource)
+2020/05/19 14:55:07 [TRACE] vertex "domainscoza_record.zipkin_dns": evaluating
+2020/05/19 14:55:07 [TRACE] [walkValidate] Entering eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/05/19 14:55:07 [TRACE] vertex "domainscoza_record.navigator_dns": evaluating
+2020/05/19 14:55:07 [TRACE] [walkValidate] Entering eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/05/19 14:55:07 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/05/19 14:55:07 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/05/19 14:55:07 [TRACE] [walkValidate] Exiting eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:07 [TRACE] vertex "domainscoza_record.zipkin_dns": visit complete
+2020/05/19 14:55:07 [TRACE] [walkValidate] Exiting eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [TRACE] vertex "domainscoza_record.navigator_dns": visit complete
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "provider.domainscoza (close)"
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza (close)": evaluating
+2020/05/19 14:55:07 [TRACE] [walkValidate] Entering eval tree: provider.domainscoza (close)
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/05/19 14:55:07 [TRACE] GRPCProvider: Close
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:07 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/05/19 14:55:07 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/05/19 14:55:07 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/05/19 14:55:07 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/05/19 14:55:07 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-05-19T14:55:07.969+0200 [DEBUG] plugin: plugin process exited: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83619
+2020-05-19T14:55:07.969+0200 [DEBUG] plugin: plugin exited
+2020/05/19 14:55:07 [TRACE] [walkValidate] Exiting eval tree: provider.domainscoza (close)
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza (close)": visit complete
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "root"
+2020/05/19 14:55:07 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/05/19 14:55:07 [TRACE] vertex "root": visit complete
+2020/05/19 14:55:07 [INFO] backend/local: apply calling Refresh
+2020/05/19 14:55:07 [INFO] terraform: building graph: GraphTypeRefresh
+2020/05/19 14:55:07 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/05/19 14:55:07 [TRACE] ConfigTransformer: Starting for path: 
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/05/19 14:55:07 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  root - terraform.graphNodeRoot
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/05/19 14:55:07 [DEBUG] Starting graph walk: walkRefresh
+2020/05/19 14:55:07 [TRACE] dag/walk: updating graph
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "root"
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "root"
+2020/05/19 14:55:07 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/05/19 14:55:07 [TRACE] vertex "root": visit complete
+2020/05/19 14:55:07 [INFO] backend/local: apply calling Plan
+2020/05/19 14:55:07 [INFO] terraform: building graph: GraphTypePlan
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/05/19 14:55:07 [TRACE] ConfigTransformer: Starting for path: 
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/05/19 14:55:07 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/05/19 14:55:07 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.navigator_dns" (*terraform.NodePlannableResource) config from main.tf:1,1-46
+2020/05/19 14:55:07 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.zipkin_dns" (*terraform.NodePlannableResource) config from main.tf:13,1-43
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+  ------
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/05/19 14:55:07 [DEBUG] adding implicit provider configuration provider.domainscoza, implied first by domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: domainscoza_record.zipkin_dns is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: domainscoza_record.navigator_dns is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.zipkin_dns
+2020/05/19 14:55:07 [DEBUG] ProviderTransformer: "domainscoza_record.zipkin_dns" (*terraform.NodePlannableResource) needs provider.domainscoza
+2020/05/19 14:55:07 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [DEBUG] ProviderTransformer: "domainscoza_record.navigator_dns" (*terraform.NodePlannableResource) needs provider.domainscoza
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/05/19 14:55:07 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/05/19 14:55:07 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.navigator_dns
+2020/05/19 14:55:07 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.zipkin_dns
+2020/05/19 14:55:07 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.domainscoza
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/05/19 14:55:07 [DEBUG] ReferenceTransformer: "domainscoza_record.zipkin_dns" references: []
+2020/05/19 14:55:07 [DEBUG] ReferenceTransformer: "provider.domainscoza" references: []
+2020/05/19 14:55:07 [DEBUG] ReferenceTransformer: "domainscoza_record.navigator_dns" references: []
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/05/19 14:55:07 [TRACE] ForcedCBDTransformer: "domainscoza_record.zipkin_dns" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/05/19 14:55:07 [TRACE] ForcedCBDTransformer: "domainscoza_record.navigator_dns" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/05/19 14:55:07 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/05/19 14:55:07 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodePlannableResource
+    domainscoza_record.zipkin_dns - *terraform.NodePlannableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/05/19 14:55:07 [DEBUG] Starting graph walk: walkPlan
+2020/05/19 14:55:07 [TRACE] dag/walk: updating graph
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "provider.domainscoza (close)"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "root"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "domainscoza_record.zipkin_dns" waiting on "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "domainscoza_record.navigator_dns" waiting on "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "provider.domainscoza (close)" waiting on "domainscoza_record.navigator_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "provider.domainscoza (close)" waiting on "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:07 [TRACE] dag/walk: added edge: "root" waiting on "provider.domainscoza (close)"
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "domainscoza_record.zipkin_dns", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "domainscoza_record.navigator_dns", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "provider.domainscoza (close)", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/05/19 14:55:07 [TRACE] dag/walk: visiting "provider.domainscoza"
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza": starting visit (*terraform.NodeApplyableProvider)
+2020/05/19 14:55:07 [TRACE] vertex "provider.domainscoza": evaluating
+2020/05/19 14:55:07 [TRACE] [walkPlan] Entering eval tree: provider.domainscoza
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:07 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-05-19T14:55:07.970+0200 [INFO]  plugin: configuring client automatic mTLS
+2020-05-19T14:55:07.999+0200 [DEBUG] plugin: starting plugin: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza args=[/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza]
+2020-05-19T14:55:08.002+0200 [DEBUG] plugin: plugin started: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83620
+2020-05-19T14:55:08.002+0200 [DEBUG] plugin: waiting for RPC address: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza
+2020-05-19T14:55:08.017+0200 [INFO]  plugin.terraform-provider-domainscoza: configuring server automatic mTLS: timestamp=2020-05-19T14:55:08.017+0200
+2020-05-19T14:55:08.047+0200 [DEBUG] plugin: using plugin: version=5
+2020-05-19T14:55:08.047+0200 [DEBUG] plugin.terraform-provider-domainscoza: plugin address: address=/var/folders/wb/__6n6kjx51bd183dldxc9plm0000gn/T/plugin374713155 network=unix timestamp=2020-05-19T14:55:08.047+0200
+2020/05/19 14:55:08 [TRACE] BuiltinEvalContext: Initialized "domainscoza" provider for provider.domainscoza
+2020/05/19 14:55:08 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:08 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/05/19 14:55:08 [TRACE] buildProviderConfig for provider.domainscoza: no configuration at all
+2020/05/19 14:55:08 [TRACE] GRPCProvider: GetSchema
+2020/05/19 14:55:08 [TRACE] GRPCProvider: Configure
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: provider.domainscoza
+2020/05/19 14:55:08 [TRACE] vertex "provider.domainscoza": visit complete
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": starting visit (*terraform.NodePlannableResource)
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": evaluating
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "domainscoza_record.navigator_dns"
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": starting visit (*terraform.NodePlannableResource)
+2020/05/19 14:55:08 [TRACE] [walkPlan] Entering eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": evaluating
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/05/19 14:55:08 [TRACE] [walkPlan] Entering eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": expanding dynamic subgraph
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": expanding dynamic subgraph
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  domainscoza_record.zipkin_dns - *terraform.NodePlannableResourceInstance
+  ------
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/05/19 14:55:08 [DEBUG] Resource instance state not found for node "domainscoza_record.zipkin_dns", instance domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/05/19 14:55:08 [DEBUG] ReferenceTransformer: "domainscoza_record.zipkin_dns" references: []
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": entering dynamic subgraph
+2020/05/19 14:55:08 [TRACE] dag/walk: updating graph
+2020/05/19 14:55:08 [TRACE] dag/walk: added new vertex: "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": starting visit (*terraform.NodePlannableResourceInstance)
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodePlannableResourceInstance
+  ------
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": evaluating
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/05/19 14:55:08 [DEBUG] Resource instance state not found for node "domainscoza_record.navigator_dns", instance domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] [walkPlan] Entering eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/05/19 14:55:08 [TRACE] EvalReadState: reading state for domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [DEBUG] ReferenceTransformer: "domainscoza_record.navigator_dns" references: []
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/05/19 14:55:08 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": entering dynamic subgraph
+2020/05/19 14:55:08 [TRACE] dag/walk: updating graph
+2020/05/19 14:55:08 [TRACE] dag/walk: added new vertex: "domainscoza_record.navigator_dns"
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "domainscoza_record.navigator_dns"
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": starting visit (*terraform.NodePlannableResourceInstance)
+2020/05/19 14:55:08 [TRACE] EvalReadState: no state present for domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": evaluating
+2020/05/19 14:55:08 [TRACE] [walkPlan] Entering eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/05/19 14:55:08 [TRACE] EvalReadState: reading state for domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/05/19 14:55:08 [TRACE] EvalReadState: no state present for domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/05/19 14:55:08 [TRACE] Re-validating config for "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:08 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/05/19 14:55:08 [TRACE] Re-validating config for "domainscoza_record.navigator_dns"
+2020/05/19 14:55:08 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/05/19 14:55:08 [TRACE] GRPCProvider: PlanResourceChange
+2020/05/19 14:55:08 [TRACE] GRPCProvider: PlanResourceChange
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/05/19 14:55:08 [TRACE] EvalWriteState: writing current state object for domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] EvalWriteState: writing current state object for domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/05/19 14:55:08 [TRACE] EvalWriteDiff: recorded Create change for domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": visit complete
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": dynamic subgraph completed successfully
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.navigator_dns": visit complete
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/05/19 14:55:08 [TRACE] EvalWriteDiff: recorded Create change for domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": visit complete
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": dynamic subgraph completed successfully
+2020/05/19 14:55:08 [TRACE] vertex "domainscoza_record.zipkin_dns": visit complete
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:08 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/05/19 14:55:08 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/05/19 14:55:08 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "provider.domainscoza (close)"
+2020/05/19 14:55:08 [TRACE] vertex "provider.domainscoza (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/05/19 14:55:08 [TRACE] vertex "provider.domainscoza (close)": evaluating
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/05/19 14:55:08 [TRACE] [walkPlan] Entering eval tree: provider.domainscoza (close)
+2020/05/19 14:55:08 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/05/19 14:55:08 [TRACE] GRPCProvider: Close
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/05/19 14:55:08 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-05-19T14:55:08.118+0200 [DEBUG] plugin: plugin process exited: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83620
+2020-05-19T14:55:08.118+0200 [DEBUG] plugin: plugin exited
+2020/05/19 14:55:08 [TRACE] [walkPlan] Exiting eval tree: provider.domainscoza (close)
+2020/05/19 14:55:08 [TRACE] vertex "provider.domainscoza (close)": visit complete
+2020/05/19 14:55:08 [TRACE] dag/walk: visiting "root"
+2020/05/19 14:55:08 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/05/19 14:55:08 [TRACE] vertex "root": visit complete
+2020/05/19 14:55:08 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/05/19 14:55:10 [INFO] backend/local: apply calling Apply
+2020/05/19 14:55:10 [INFO] terraform: building graph: GraphTypeApply
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/05/19 14:55:10 [TRACE] ConfigTransformer: Starting for path: 
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.DiffTransformer
+2020/05/19 14:55:10 [TRACE] DiffTransformer starting
+2020/05/19 14:55:10 [TRACE] DiffTransformer: found Create change for domainscoza_record.navigator_dns 
+2020/05/19 14:55:10 [TRACE] DiffTransformer: domainscoza_record.navigator_dns will be represented by domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] DiffTransformer: found Create change for domainscoza_record.zipkin_dns 
+2020/05/19 14:55:10 [TRACE] DiffTransformer: domainscoza_record.zipkin_dns will be represented by domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] DiffTransformer complete
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/05/19 14:55:10 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.navigator_dns (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:1,1-46
+2020/05/19 14:55:10 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.zipkin_dns (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:13,1-43
+2020/05/19 14:55:10 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.navigator_dns" (*terraform.NodeApplyableResourceInstance) config from main.tf:1,1-46
+2020/05/19 14:55:10 [TRACE] AttachResourceConfigTransformer: attaching to "domainscoza_record.zipkin_dns" (*terraform.NodeApplyableResourceInstance) config from main.tf:13,1-43
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/05/19 14:55:10 [DEBUG] Resource state not found for node "domainscoza_record.navigator_dns", instance domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [DEBUG] Resource state not found for node "domainscoza_record.zipkin_dns", instance domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/05/19 14:55:10 [DEBUG] adding implicit provider configuration provider.domainscoza, implied first by domainscoza_record.navigator_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: domainscoza_record.navigator_dns (prepare state) is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: domainscoza_record.zipkin_dns (prepare state) is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: domainscoza_record.navigator_dns is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: domainscoza_record.zipkin_dns is provided by provider.domainscoza or inherited equivalent
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [DEBUG] ProviderTransformer: "domainscoza_record.navigator_dns" (*terraform.NodeApplyableResourceInstance) needs provider.domainscoza
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [DEBUG] ProviderTransformer: "domainscoza_record.zipkin_dns" (*terraform.NodeApplyableResourceInstance) needs provider.domainscoza
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.navigator_dns (prepare state)
+2020/05/19 14:55:10 [DEBUG] ProviderTransformer: "domainscoza_record.navigator_dns (prepare state)" (*terraform.NodeApplyableResource) needs provider.domainscoza
+2020/05/19 14:55:10 [TRACE] ProviderTransformer: exact match for provider.domainscoza serving domainscoza_record.zipkin_dns (prepare state)
+2020/05/19 14:55:10 [DEBUG] ProviderTransformer: "domainscoza_record.zipkin_dns (prepare state)" (*terraform.NodeApplyableResource) needs provider.domainscoza
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/05/19 14:55:10 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/05/19 14:55:10 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.navigator_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.zipkin_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] AttachSchemaTransformer: attaching resource schema to domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.domainscoza
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/05/19 14:55:10 [DEBUG] ReferenceTransformer: "domainscoza_record.navigator_dns (prepare state)" references: []
+2020/05/19 14:55:10 [DEBUG] ReferenceTransformer: "domainscoza_record.zipkin_dns (prepare state)" references: []
+2020/05/19 14:55:10 [DEBUG] ReferenceTransformer: "domainscoza_record.navigator_dns" references: []
+2020/05/19 14:55:10 [DEBUG] ReferenceTransformer: "domainscoza_record.zipkin_dns" references: []
+2020/05/19 14:55:10 [DEBUG] ReferenceTransformer: "provider.domainscoza" references: []
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/05/19 14:55:10 [TRACE] AttachDependenciesTransformer: domainscoza_record.navigator_dns depends on []
+2020/05/19 14:55:10 [TRACE] AttachDependenciesTransformer: domainscoza_record.zipkin_dns depends on []
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.PruneUnusedValuesTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.PruneUnusedValuesTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  ------
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/05/19 14:55:10 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/05/19 14:55:10 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.navigator_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+  domainscoza_record.zipkin_dns (prepare state) - *terraform.NodeApplyableResource
+    provider.domainscoza - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+  provider.domainscoza - *terraform.NodeApplyableProvider
+  provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+    domainscoza_record.navigator_dns - *terraform.NodeApplyableResourceInstance
+    domainscoza_record.zipkin_dns - *terraform.NodeApplyableResourceInstance
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.domainscoza (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/05/19 14:55:10 [DEBUG] Starting graph walk: walkApply
+2020/05/19 14:55:10 [TRACE] dag/walk: updating graph
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "provider.domainscoza (close)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "root"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "domainscoza_record.navigator_dns (prepare state)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "domainscoza_record.zipkin_dns (prepare state)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "domainscoza_record.navigator_dns"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "provider.domainscoza"
+2020/05/19 14:55:10 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "domainscoza_record.navigator_dns" waiting on "domainscoza_record.navigator_dns (prepare state)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "domainscoza_record.navigator_dns (prepare state)" waiting on "provider.domainscoza"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "provider.domainscoza (close)" waiting on "domainscoza_record.navigator_dns"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "domainscoza_record.zipkin_dns" waiting on "domainscoza_record.zipkin_dns (prepare state)"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "provider.domainscoza (close)" waiting on "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "domainscoza_record.zipkin_dns (prepare state)" waiting on "provider.domainscoza"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "domainscoza_record.navigator_dns"
+2020/05/19 14:55:10 [TRACE] dag/walk: added edge: "root" waiting on "provider.domainscoza (close)"
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "domainscoza_record.navigator_dns", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "domainscoza_record.navigator_dns (prepare state)", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "provider.domainscoza (close)", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "domainscoza_record.zipkin_dns", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "domainscoza_record.zipkin_dns (prepare state)", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/05/19 14:55:10 [TRACE] dag/walk: visiting "provider.domainscoza"
+2020/05/19 14:55:10 [TRACE] vertex "provider.domainscoza": starting visit (*terraform.NodeApplyableProvider)
+2020/05/19 14:55:10 [TRACE] vertex "provider.domainscoza": evaluating
+2020/05/19 14:55:10 [TRACE] [walkApply] Entering eval tree: provider.domainscoza
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-05-19T14:55:10.515+0200 [INFO]  plugin: configuring client automatic mTLS
+2020-05-19T14:55:10.545+0200 [DEBUG] plugin: starting plugin: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza args=[/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza]
+2020-05-19T14:55:10.548+0200 [DEBUG] plugin: plugin started: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83621
+2020-05-19T14:55:10.548+0200 [DEBUG] plugin: waiting for RPC address: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza
+2020-05-19T14:55:10.564+0200 [INFO]  plugin.terraform-provider-domainscoza: configuring server automatic mTLS: timestamp=2020-05-19T14:55:10.563+0200
+2020-05-19T14:55:10.594+0200 [DEBUG] plugin: using plugin: version=5
+2020-05-19T14:55:10.594+0200 [DEBUG] plugin.terraform-provider-domainscoza: plugin address: address=/var/folders/wb/__6n6kjx51bd183dldxc9plm0000gn/T/plugin045167520 network=unix timestamp=2020-05-19T14:55:10.593+0200
+2020/05/19 14:55:10 [TRACE] BuiltinEvalContext: Initialized "domainscoza" provider for provider.domainscoza
+2020/05/19 14:55:10 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:10 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/05/19 14:55:10 [TRACE] buildProviderConfig for provider.domainscoza: no configuration at all
+2020/05/19 14:55:10 [TRACE] GRPCProvider: GetSchema
+2020/05/19 14:55:10 [TRACE] GRPCProvider: Configure
+2020/05/19 14:55:10 [TRACE] [walkApply] Exiting eval tree: provider.domainscoza
+2020/05/19 14:55:10 [TRACE] vertex "provider.domainscoza": visit complete
+2020/05/19 14:55:10 [TRACE] dag/walk: visiting "domainscoza_record.navigator_dns (prepare state)"
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.navigator_dns (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2020/05/19 14:55:10 [TRACE] dag/walk: visiting "domainscoza_record.zipkin_dns (prepare state)"
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.zipkin_dns (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.navigator_dns (prepare state)": evaluating
+2020/05/19 14:55:10 [TRACE] [walkApply] Entering eval tree: domainscoza_record.navigator_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.zipkin_dns (prepare state)": evaluating
+2020/05/19 14:55:10 [TRACE] [walkApply] Entering eval tree: domainscoza_record.zipkin_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/05/19 14:55:10 [TRACE] [walkApply] Exiting eval tree: domainscoza_record.zipkin_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] [walkApply] Exiting eval tree: domainscoza_record.navigator_dns (prepare state)
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.zipkin_dns (prepare state)": visit complete
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.navigator_dns (prepare state)": visit complete
+2020/05/19 14:55:10 [TRACE] dag/walk: visiting "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.zipkin_dns": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/05/19 14:55:10 [TRACE] dag/walk: visiting "domainscoza_record.navigator_dns"
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.navigator_dns": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.zipkin_dns": evaluating
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.navigator_dns": evaluating
+2020/05/19 14:55:10 [TRACE] [walkApply] Entering eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] [walkApply] Entering eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/05/19 14:55:10 [TRACE] EvalReadDiff: Read Create change from plan for domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/05/19 14:55:10 [TRACE] EvalReadState: reading state for domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] EvalReadState: no state present for domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/05/19 14:55:10 [TRACE] EvalReadDiff: Read Create change from plan for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/05/19 14:55:10 [TRACE] EvalReadState: reading state for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] EvalReadDiff: Read Create change from plan for domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/05/19 14:55:10 [TRACE] EvalReadState: no state present for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/05/19 14:55:10 [TRACE] EvalReadDiff: Read Create change from plan for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/05/19 14:55:10 [TRACE] Re-validating config for "domainscoza_record.zipkin_dns"
+2020/05/19 14:55:10 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/05/19 14:55:10 [TRACE] GRPCProvider: PlanResourceChange
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2020/05/19 14:55:10 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/05/19 14:55:10 [TRACE] EvalReadState: reading state for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] EvalReadState: no state present for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: terraform.EvalNoop
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalApply
+2020/05/19 14:55:10 [DEBUG] domainscoza_record.zipkin_dns: applying the planned Create change
+2020/05/19 14:55:10 [TRACE] GRPCProvider: ApplyResourceChange
+2020/05/19 14:55:10 [TRACE] Re-validating config for "domainscoza_record.navigator_dns"
+2020/05/19 14:55:10 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020-05-19T14:55:10.663+0200 [DEBUG] plugin.terraform-provider-domainscoza: panic: interface conversion: interface {} is nil, not string
+2020-05-19T14:55:10.663+0200 [DEBUG] plugin.terraform-provider-domainscoza: 
+2020-05-19T14:55:10.663+0200 [DEBUG] plugin.terraform-provider-domainscoza: goroutine 26 [running]:
+2020-05-19T14:55:10.663+0200 [DEBUG] plugin.terraform-provider-domainscoza: main.resourceRecordCreate(0xc000227110, 0x0, 0x0, 0x2, 0x24d5be0)
+2020-05-19T14:55:10.663+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/Work/wtc/terraform/domains_coza/resource_record.go:35 +0x2e3
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc0004606c0, 0xc0000f80f0, 0xc000716d20, 0x0, 0x0, 0x1a3ba01, 0xc00009f188, 0xc0008098f0)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.12.0/helper/schema/resource.go:310 +0x365
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc000212900, 0xc00022fa10, 0xc0000f80f0, 0xc000716d20, 0xc0000b4aa8, 0xc0000100e8, 0x1a3d5c0)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.12.0/helper/schema/provider.go:294 +0x99
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc0002064c0, 0x1dc9ca0, 0xc000808cf0, 0xc000226af0, 0xc0002064c0, 0xc000808cf0, 0xc000072b78)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.12.0/internal/helper/plugin/grpc_provider.go:885 +0x8b4
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1b44560, 0xc0002064c0, 0x1dc9ca0, 0xc000808cf0, 0xc000201080, 0x0, 0x1dc9ca0, 0xc000808cf0, 0xc000378240, 0x105)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.12.0/internal/tfplugin5/tfplugin5.pb.go:3305 +0x217
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000782600, 0x1dd3b00, 0xc000782f00, 0xc000210500, 0xc000441e60, 0x249bec0, 0x0, 0x0, 0x0)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1024 +0x501
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: google.golang.org/grpc.(*Server).handleStream(0xc000782600, 0x1dd3b00, 0xc000782f00, 0xc000210500, 0x0)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:1313 +0xd3d
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc00020c000, 0xc000782600, 0x1dd3b00, 0xc000782f00, 0xc000210500)
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:722 +0xa1
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-05-19T14:55:10.664+0200 [DEBUG] plugin.terraform-provider-domainscoza: 	/Users/chris/go/pkg/mod/google.golang.org/grpc@v1.27.1/server.go:720 +0xa1
+2020/05/19 14:55:10 [ERROR] <root>: eval: *terraform.EvalDiff, err: rpc error: code = Unavailable desc = transport is closing
+2020/05/19 14:55:10 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/05/19 14:55:10 [TRACE] [walkApply] Exiting eval tree: domainscoza_record.navigator_dns
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.navigator_dns": visit complete
+2020/05/19 14:55:10 [DEBUG] domainscoza_record.zipkin_dns: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/05/19 14:55:10 [TRACE] EvalMaybeTainted: domainscoza_record.zipkin_dns encountered an error during creation, so it is now marked as tainted
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/05/19 14:55:10 [TRACE] EvalWriteState: removing state object for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2020/05/19 14:55:10 [TRACE] EvalApplyProvisioners: domainscoza_record.zipkin_dns has no state, so skipping provisioners
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/05/19 14:55:10 [TRACE] EvalMaybeTainted: domainscoza_record.zipkin_dns encountered an error during creation, so it is now marked as tainted
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/05/19 14:55:10 [TRACE] EvalWriteState: removing state object for domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalIf
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/05/19 14:55:10 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2020/05/19 14:55:10 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/05/19 14:55:10 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/05/19 14:55:10 [TRACE] [walkApply] Exiting eval tree: domainscoza_record.zipkin_dns
+2020/05/19 14:55:10 [TRACE] vertex "domainscoza_record.zipkin_dns": visit complete
+2020/05/19 14:55:10 [TRACE] dag/walk: upstream of "provider.domainscoza (close)" errored, so skipping
+2020/05/19 14:55:10 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/05/19 14:55:10 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020-05-19T14:55:10.665+0200 [DEBUG] plugin: plugin process exited: path=/Users/chris/Work/wtc/terraform/domains_coza/terraform-provider-domainscoza pid=83621 error="exit status 2"
+2020/05/19 14:55:10 [TRACE] statemgr.Filesystem: creating backup snapshot at terraform.tfstate.backup
+2020/05/19 14:55:10 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 8
+2020/05/19 14:55:10 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2020/05/19 14:55:10 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/05/19 14:55:10 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-05-19T14:55:10.679+0200 [DEBUG] plugin: plugin exited

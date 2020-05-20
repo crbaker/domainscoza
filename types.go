@@ -31,3 +31,23 @@ func indexOf(records []Record, pred func(record Record) bool) int {
 	}
 	return -1
 }
+
+func find(s []Record, record Record) *Record {
+	index := indexOf(s, func(that Record) bool { return that.Name == record.Name })
+
+	if index >= 0 {
+		return &s[index]
+	}
+
+	return nil
+}
+
+func remove(s []Record, record Record) []Record {
+	index := indexOf(s, func(that Record) bool { return that.Name == record.Name })
+
+	if index >= 0 {
+		s[index] = s[len(s)-1]
+		return s[:len(s)-1]
+	}
+	return s
+}
